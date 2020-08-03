@@ -1,0 +1,85 @@
+html {
+    font-family: 'Raleway', Ubuntu,sans-serif;
+}
+
+body {
+	background: #eeeeee;
+}
+
+h1 {
+	padding-top:1em;
+	margin-top:0em;
+	padding-left:0.4em;
+}
+
+h2 {
+	padding-top:1em;
+	margin-top:1em;
+	padding-left:0.7em;
+	clear:left;
+}
+
+h3 {
+	margin-left:1em;
+}
+
+p {
+	padding-left: 1em;
+}
+
+#encode fieldset {
+	width:30%;
+	display:inline-block;
+}
+
+#decode fieldset {
+	width:47%;
+	display:inline-block;
+}
+
+
+#encode_result_status {
+	display:none;
+	background: #ffeeee;
+	font-size:small;
+	font-weight:bold;
+	width:31%;
+	float:right;
+	margin-right:5%;
+}
+
+
+fieldset {
+	border: solid 1px #cccccc;
+	background: white;
+}
+
+fieldset.unable-to-cover-text,
+fieldset.unable-to-cover-text textarea {
+	background: #ffeeee;
+}
+
+
+textarea {
+	width: 100%;
+	height:4em;
+	resize: none;
+	border: none;
+}
+
+footer {
+	margin-top:100px;
+	border-top: solid 1px #ddd;
+	padding:0.5em 0px 1em 0px;
+	color: #666;
+}
+
+
+footer p {
+	font-size:small;
+	padding-left:1em;
+}
+
+footer a {
+	color: #666;
+}

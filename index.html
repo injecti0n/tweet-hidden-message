@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<title>Tweet Your Secret Message!</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="steg-of-the-dump.js"></script>
+	<style>
+		legend.display-5{
+			font-size:1rem !important;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			"use strict";
+
+			$("#techyreasoning").click(function(event){
+				var $this = $(this);
+				$this.replaceWith($this.attr("data-reasoning"));
+				event.preventDefault();
+			})
+		})
+	</script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+	  <div class="jumbotron jumbotron bg-dark text-white">
+		  <div class="container text-center">
+			  <h1 class="display-5">Tweet your secret message!</h1>
+			  <p class="lead">Hide secret messages in your tweets (or any text) with <em title="Source code at the bottom of the page">steg-of-the-dump.js</em>.</p>
+			  <p class="lead"><a href="https://twitter.com/0x471ll4" target="_blank" class="fa fa-twitter"></a></p>
+			  <hr class="my-2">
+		  </div>
+		  <div class="row p-5">
+			  <!--tweet-->
+			  <div class="col-md-12 ">
+				<div class="input-group">
+					<legend class="display-5">Tweet to post <span id="tweet_length" title="Tweet may have extra "></span></legend>
+					<textarea class="form-control bg-dark text-white" id="encode_tweet" aria-label="With textarea" placeholder="Test tweet #steganography"></textarea>
+				  </div>
+			  </div>
+
+			  <!--hidden -->
+			  <div class="col-md-12 mt-3">
+				<div class="input-group">
+					<legend class="display-5 ">Hidden Message  <span id="hidden_message_length" title="Tweet may have extra "></span></legend>
+					<textarea class="form-control bg-dark text-white" id="encode_secret" aria-label="With textarea" ></textarea>
+				  </div>
+			  </div>
+			  <!--Encoded -->
+			  <div class="col-md-12 mt-3">
+				<div class="input-group">
+					<legend class="display-5">Tweet to post <span id="tweet_length" title="Tweet may have extra "></span></legend>
+					<textarea class="form-control bg-secondary text-white" id="encode_result" aria-label="With textarea" ></textarea>
+				  </div>
+				  <p id="encode_result_status emailHelp" class="form-text text-danger">Warning: Not all of Hidden Message stored in tweet. Add more text (e.g. spaces) to Tweet, or reduce text in Hidden Message.</p>
+			  </div>
+			  
+			  <div class="col-md-12">
+				<hr class="my-3 bg-secondary">
+				<h5 class="display-5 text-center">DECODE HIDDEN TWEET</h1>
+			  </div>
+			  <div class="col-md-12 mt-3">
+				<div class="input-group">
+					<legend class="display-5 ">Encrypted tweet <span id="tweet_length" title="Tweet may have extra "></span></legend>
+					<textarea class="form-control bg-secondary text-white" id="decode_tweet" aria-label="With textarea" ></textarea>
+				  </div>
+			  </div>
+			  <div class="col-md-12 mt-3">
+				<div class="input-group">
+					<legend class="display-5">Hidden Message <span id="tweet_length" title="Tweet may have extra "></span></legend>
+					<textarea class="form-control bg-success text-white" id="decode_secret" readonly></textarea>
+				  </div>
+			  </div>
+		  </div>
+		 
+	  </div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
